@@ -1,0 +1,31 @@
+#menu_block {
+    background-image: url('../img/lecaille.jpg');
+}
+
+#lacarte_img {
+    background-image: url('../img/epiceriefine.jpg');
+}
+
+#lacarte_text {
+    text-align: center;
+}
+
+#lacarte h6 {
+    margin-top: 100px;
+}
+
+#histoire_img {
+    background-image: url('../img/degustation.jpg');
+}
+
+#histoire h6 {
+	margin-bottom: 10%;
+}
+
+#histoire_text h6:nth-child(2) {
+    text-align: left;
+}
+
+#bar_img {
+    background-image: url('../img/etalage.jpg');
+}

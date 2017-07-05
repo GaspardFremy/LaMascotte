@@ -1,0 +1,608 @@
+@font-face {
+	font-family: "Aleo";
+	src: url('../font/Jura-Regular.ttf');
+}
+
+@font-face {
+	font-family: "Aruna";
+	src: url('../font/Aruna.ttf');
+}
+
+html,
+body {
+    background-image: url(../img/bg.png);
+    font-family: 'Aleo';
+	margin:0 auto;
+	overflow-x: hidden;
+}
+
+#body_container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/*MENU BLOCK*/
+
+
+/*NAV*/
+
+#menu_container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.topnav {
+    background-color: white;
+    overflow: visible;
+	height: 45px;
+	text-align: center;
+	z-index: 1000000;
+}
+
+.topnav li {
+
+	float: left;
+	margin-left: 20px;
+}
+
+#img_menu {
+	float: left;
+	width: 266px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+	text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+	margin-left: 2%;
+}
+
+.topnav a:nth-child(3){
+	margin-right: 9%;
+}
+
+.topnav a:nth-child(5){
+	margin-left: 3%;
+}
+
+.topnav a:hover {
+    color: #91954E;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 1279px) {
+  .topnav a:not(:first-child) {
+	  display: none;
+	  margin-left: 0;
+	  margin-right: 0;
+   }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+	.topnav {
+		background-color: white;
+	}
+
+	.topnav a {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+  .topnav img {
+	display: none;
+  }
+}
+
+
+@media screen and (max-width: 1279px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+	background-color: white;
+	border-bottom: 1px solid black;
+  }
+}
+
+
+#menu_block {
+    background-image: url(../img/lamascotte.jpg);
+    background-size: cover;
+    height: 650px;
+}
+
+#menu_block h1 {
+    color: white;
+    font-size: 70px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 200px;
+	font-family: 'Aruna', sans-serif;
+}
+
+#menu_block h2 {
+    color: white;
+    font-size: 27px;
+    font-weight: 500;
+    margin-top: 13px;
+    margin-left: 6%;
+    text-align: center;
+}
+
+#arrow{
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+	margin-top: 224px;
+	padding-bottom: 11%;
+}
+
+/*END MENU BLOCK*/
+
+/*INFO PRATIQUES BLOCK*/
+
+#info_pratiques img {
+    width: 15px;
+}
+
+#info_pratiques {
+    width: 50%;
+    float: left;
+}
+
+#info_pratiques h6:first-child {
+    margin-top: 30px;
+}
+
+#info_pratiques h6 {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: 48px;
+    line-height: 50px;
+}
+
+#addresse {
+    margin-left: 34px;
+}
+
+h6 img {
+    margin-right: 15px;
+}
+
+.map {
+    float: left;
+    width: 50%;
+    background-color: green;
+    height: 410px;
+}
+
+.cta {
+    border: 2px solid #91954E;
+    color: #91954E;
+    width: 73px;
+    padding: 7px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 41px;
+	margin-bottom: 3%;
+}
+
+#bar .cta , #histoire .cta {
+	width: 100px;
+}
+
+.cta:hover {
+    background-color: #91954E;
+    color: white;
+}
+
+/*END INFO PRATIQUES BLOCK*/
+
+/*LA CARTE*/
+#lacarte_img {
+    float: left;
+    width: 50%;
+    height: 410px;
+    background-image: url('../img/carte.jpg');
+    background-size: cover;
+}
+
+#lacarte_text {
+    width: 50%;
+    float: left;
+    height: 410px;
+}
+
+#lacarte h6 {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: 48px;
+    line-height: 40px;
+}
+/*END LA CARTE*/
+
+/*UN PEU D'HISTOIRE*/
+
+#histoire_img {
+    float: right;
+    width: 50%;
+}
+
+#histoire_text {
+    width: 50%;
+    float: left;
+
+}
+
+#histoire h6 {
+	margin-top: 15%;
+	margin-bottom: 15%;
+	text-align: center;
+    font-size: 19px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 24px;
+}
+
+/*END UN PEU D'HISTOIRE*/
+
+/*BAR*/
+
+#bar_img {
+	clear: both;
+    float: left;
+    width: 50%;
+	margin-bottom: 50px;
+}
+
+#bar_text {
+    width: 50%;
+    float: left;
+}
+
+#bar h6 {
+    margin-top: 15%;
+	margin-bottom: 15%;
+	text-align: center;
+    font-size: 19px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 24px;
+}
+
+
+/*BAR*/
+
+/*LIVRAISON*/
+
+#livraison_img {
+	clear: both;
+    float: left;
+    width: 50%;
+	margin-bottom: 50px;
+    height: 410px;
+	background-image: url('../img/etalage.jpg');
+	background-size: cover;
+}
+
+/*DEGUSTATION*/
+
+#degustation_img {
+    float: right;
+    width: 50%;
+	height: 410px;
+	background-image: url('../img/degustation.jpg');
+	background-size: cover;
+}
+/*FORM1*/
+
+#form_container1 {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+
+#form_container1 form {
+	clear: both;
+	display: block;
+	max-width: 600px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#form_container1 input, label  {
+	width: 48%;
+}
+
+#form_container1 input, select, textarea   {
+
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#form_container1 input[type=submit]  {
+    width: 200px;
+    background-color: #4CAF50;
+    color: white;
+	margin-top: 15px;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#form_container1 input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+#demande {
+	width: 100%;
+}
+
+#first_name, #phone, #people {
+	float: right;
+}
+
+#last_name, #date, #email {
+	float: left;
+}
+
+.separation {
+	clear: both;
+	width: 40%;
+	border: 1px solid #929a51;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/*END FORM1*/
+
+
+/*PARALAX*/
+
+.paraxify{
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: 200px;
+  clear: both;
+  text-align: center;
+  color: white;
+  padding-top: 10%;
+  font-size: 30px;
+
+}
+
+#salle {
+    background-image: url(../img/salle.png);
+}
+
+/*ENDPARALAX*/
+
+/*FORM2*/
+
+#priva_block {
+	clear: both;
+}
+
+#priva_text {
+	clear: both;
+	float: left;
+	width: 40%;
+	margin-top: 100px;
+	margin-left: 3%;
+}
+
+#form_container2 {
+	clear: both;
+	float: right;
+}
+
+#form_container2 form {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-right: 3%;
+	width: 50%;
+	float: right;
+	display: block;
+	max-width: 600px;
+	text-align: center;
+}
+
+#form_container2 input, label  {
+	width: 48%;
+}
+
+#form_container2 input, select, textarea   {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#form_container2 input[type=submit]  {
+    width: 200px;
+	border: 2px solid #91954E;
+    background-color: transparent;
+	cursor: pointer;
+}
+
+#form_container2 input[type=submit]:hover {
+	background-color: #91954E;
+}
+
+#message2 {
+	width: 100%;
+	padding: 40px;
+}
+
+#last_name2 {
+	float: left;
+}
+
+#email2 {
+	float: right;
+}
+
+#commandez {
+	width: 200px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+/*ENDFORM2*/
+
+
+/*FOOTER*/
+
+.footer {
+	clear: both;
+	height: 100px;
+	background-color: #91954E;
+}
+
+/*END FOOTER*/
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 1200px) {
+  #info_pratiques {
+	  width: 100%;
+  }
+
+  .info_text {
+	  width: 50%;
+	  font-size: 15px;
+  	  margin: 0 auto;
+  }
+
+  #info_text h6 {
+	display: inline-block;
+  }
+
+  #map {
+  width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+	#histoire_img, #histoire_text, #lacarte_text, #lacarte_img, #bar_img, #bar_text {
+	  width: 100%;
+	}
+
+	#Lacarte h6, #histoire h6, #bar h6 {
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
+}
+
+/*RESPONSIVE FONT*/
+
+@media screen and (max-width: 775px) {
+
+  .info_text {
+	font-size: 15px;
+	width: 70%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Boutton float */
+
+#fixed-flag{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-size: contain;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+}
+
+#container-floating {
+
+}
+
+#container-floating img{
+	width: 100%;
+}
+
+#container-floating:hover .appear-flag{
+	animation: bounce 0.1s ease-out;
+	animation-fill-mode:  forwards;
+}
+
+.appear-flag{
+	width: 40px;
+	height: 40px;
+	right: 31px;
+	border-radius: 50%;
+	position: fixed;
+	z-index: 300;
+	transform:  scale(0);
+	cursor: pointer;
+}
+
+.flag1{
+	background: #401718;
+	bottom: 73px;
+	animation-delay: 0.2s;
+	animation: bounce-out 0.50s linear;
+	animation-fill-mode:  forwards;
+}
+
+.flag2{
+	background: #401718;
+	bottom: 115px;
+	animation-delay: 0.15s;
+	animation: bounce-out 0.50s linear;
+	animation-fill-mode:  forwards;
+}
+
+@keyframes bounce{
+    from {opacity: 0;}
+    to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes bounce-out{
+    from {opacity: 1; transform: scale(1);}
+    to {opacity: 0; transform: scale(0);}
+}

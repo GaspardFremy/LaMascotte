@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>L'Écaille</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/ecaille.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="icon" href="/static/img/favicon.ico">
+</head>
+
+<body>
+
+        <div id="menu_block">
+                <div class="topnav" id="myTopnav">
+                    <div id="menu_container">
+                         <a href="#infos">Infos Pratiques</a>
+                         <a href="/carte">La carte</a>
+                         <a href="/ecaille">Le lieux</a>
+                         <img id="img_menu" src="/static/img/logo_menu.png">
+                         <a href="#emporter">vente à emporter</a>
+                         <a href="#reservation">réservation</a>
+                         <a href="#sale_privatisable">Sale privatisable</a>
+                         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                    </div>
+                </div>
+
+            <div id="moving_effect" class="effect scrollme animateme" data-when="exit" data-from="0" data-to="1" data-opacity="0" data-translatey="-150" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                <h1 class="floating_text run-animation" data-float-translate='1' data-float-duration="1.5">L'ecaille</h1>
+                <h2>Vente à emporter de produit de la mère.</h2>
+            </div>
+            <img id="arrow" src="/static/img/arrow.png">
+        </div>
+
+        <div id="body_container">
+            <!-- VENTE A EMPORTER -->
+            <div id="lacarte">
+                <div id="lacarte_img"
+                class="scrollme animateme"
+                data-when="enter"
+                data-from="1"
+                data-to="0"
+                data-opacity="0"
+                style="opacity: 0.87; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                </div>
+
+                <div id="lacarte_text">
+                    <h6>Tout nos plats sont disponibles en vente à emporter</h6>
+                    <a href="/carte">
+                        <div class="cta scrollme animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" style="opacity: 0.87; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                            carte</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- DEGUSTATION -->
+            <div id="histoire">
+                <div id="degustation_img"
+                class="scrollme animateme"
+                data-when="enter"
+                data-from="1"
+                data-to="0"
+                data-opacity="0"
+                style="opacity: 0.87; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                </div>
+                <div id="histoire_text">
+                    <h6 class="scrollme animateme"
+                    data-when="enter"
+                    data-from="0.5"
+                    data-to="0"
+                    data-crop="false"
+                    data-opacity="0"
+                    data-scale="1.5"
+                    style="opacity: 0.66; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1.169, 1.169, 1.169);">
+                    Dégustation</h6>
+                    <h6>De 10h à 23h30 en dégustation sur place, les meilleurs produits de nos terroirs maritimes
+                        Assiette d’huitres, saumon fumé, crustacés, coquillages et bien sur nos plateaux de fruits de mer.
+                        A déguster en salle ou en terrace</h6>
+                </div>
+            </div>
+            <!-- LIVRAISON A DOMICILE -->
+            <div id="bar">
+
+                <div id="livraison_img"
+                class="scrollme animateme"
+                data-when="enter"
+                data-from="1"
+                data-to="0"
+                data-opacity="0"
+                style="opacity: 0.87; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                </div>
+
+
+                <div id="bar_text">
+                    <h6 class="scrollme animateme"
+                    data-when="enter"
+                    data-from="0.5"
+                    data-to="0"
+                    data-crop="false"
+                    data-opacity="0"
+                    data-scale="1.5"
+                    style="opacity: 0.66; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1.169, 1.169, 1.169);">
+                     Faites vous livrer! </h6>
+                    <a href="http://www.la-mascotte-montmartre.com/livraison-fruits-de-mer/">
+                        <div class="cta scrollme animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" style="opacity: 0.87; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                            livraison</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="separation"  id="reservation"></div>
+
+            <div id="form_container1">
+                <form>
+                     <fieldset>
+                        <input type="text" id="last_name" name="first_name" placeholder="nom"/>
+                        <input type="text" id="first_name" name="last_name" placeholder="prénom"/>
+                        <input class="date" type="text" id="date" name="hour" value="" placeholder="date et heure"/>
+                        <input type="phone" id="phone" name="phone" placeholder="telephone"/></br>
+                        <input type="email" id="email" name="email" placeholder="email"/>
+                        <input type="text" id="people" name="people" placeholder="nombre">
+                        <textarea id="demande" name="demande" placeholder="demande particulières"></textarea>
+                        <input type="submit" value="reservation" />
+                     </fieldset>
+                </form>
+            </div>
+
+            <div class="separation"></div>
+
+        </div>
+
+        <section>
+            <div class="paraxify" id="salle">
+                <h1>SALLE PRIVATISABLE</h1>
+            </div>
+        </section>
+
+        <div class="body_container">
+            <div id="priva_block">
+                <div id="priva_text">
+                    <p> Au 1er étage, une salle indépendante de 40 couverts. </br> </br>
+                        Idéale pour repas de société, mariage, baptême, etc…  </br>
+                        N’hésitez pas à nous consulter via ce formulaire pour un devis de location.</br>
+                        Nous vous répondrons dans la journée!</p>
+                </div>
+
+                <div id="form_container2">
+                    <form>
+                         <fieldset>
+                            <input type="text" id="last_name2" name="first_name" placeholder="nom"/>
+                            <input type="email" id="email2" name="email" placeholder="email"/>
+                            <textarea id="message2" name="demande" placeholder="message"></textarea>
+                            <input type="submit" class="cta" value="envoyer" />
+                         </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <div class="separation"></div>
+            <a href="http://www.la-mascotte-montmartre.com/livraison-fruits-de-mer/">
+                <div class="cta" id="commandez">commendez en ligne!</div>
+            </a>
+
+            <div class="separation"></div>
+
+        </div>
+    </main>
+
+    <div id="container-floating">
+        <div class="flag2 appear-flag">
+            <img src='/static/img/IT.png'>
+        </div>
+        <div class="flag1 appear-flag">
+            <img src='/static/img/UK.png'>
+        </div>
+        <div id="fixed-flag">
+            <img src='/static/img/FR.png'>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+
+        </div>
+    </footer>
+
+
+
+    <script src="/static/js/floating_text.js">
+    </script>
+    <script src="/static/js/main.js">
+    </script>
+    <script src="/static/js/jquery.scrollme.min.js">
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBCKlE1yBf7M8dmflCbdFY7a4I_jvLuNs&libraries=places&callback=initMap">
+    </script>
+    <script src="/static/js/paraxify.js"></script>
+    <script>
+        myParaxify = paraxify('.paraxify');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>La Mascotte</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/datePicker.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/boilerplate.css">
+
+    <!-- JQUERY & LIBRARY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+    <!-- FAVICO -->
+    <link rel="icon" href="/static/img/favicon.ico">
+
+
+</head>
+
+<body>
+    <header>
+        <div id="menu_block">
+                <div class="topnav" id="myTopnav">
+                    <div id="menu_container">
+                         <a href="#info_pratiques">Infos Pratiques</a>
+                         <a href="/carte">La carte</a>
+                         <a href="#histoire_text">Le lieux</a>
+                         <img id="img_menu" src="/static/img/logo_menu.png">
+                         <a href="/ecaille">vente à emporter</a>
+                         <a href="#reservation">réservation</a>
+                         <a href="#sale_privatisable">Sale privatisable</a>
+                         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                    </div>
+                </div>
+
+            <div id="moving_effect" class="effect scrollme animateme" data-when="exit" data-from="0" data-to="1" data-opacity="0" data-translatey="-150" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                <h1 class="floating_text run-animation" data-float-translate='1' data-float-duration="1.5">La Mascotte</h1>
+                <h2>Restaurant spécialisé dans les produits de la mer depuis 1889.</h2>
+            </div>
+            <img id="arrow" src="/static/img/arrow.png">
+        </div>
+
+    </header>
+
+    <main>
+        <div id="body_container">
+
+            <div id="info_pratiques" class="responsivewidth">
+                <div class="info_text scrollme animateme"
+                data-when="enter"
+                data-from="1"
+                data-to="0"
+                data-opacity="0"
+                data-translatex="-100"
+                data-opacity="0"
+                style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+
+                    <h6><img src="/static/img/icon/marker.png" class="info_text scrollme animateme"
+                    data-when="enter"
+                    data-from="0.75"
+                    data-to="0"
+                    data-opacity="0"
+                    data-translatex="-900"
+                    data-opacity="0"
+                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                    Le restaurant vous acceuille tout les jours de 8h à 22h.</br> <p id="addresse">52 rue des Abesses, Paris 18ème arrondissement</p></h6>
+
+                    <h6><img src="/static/img/icon/subway.png" class="info_text scrollme animateme"
+                    data-when="enter"
+                    data-from="0.75"
+                    data-to="0"
+                    data-opacity="0"
+                    data-translatex="-900"
+                    data-opacity="0"
+                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                    Metro Abbesses, Blanche ou Pigalle</h6>
+
+                    <h6><img src="/static/img/icon/phone.png" class="info_text scrollme animateme"
+                    data-when="enter"
+                    data-from="0.65"
+                    data-to="0"
+                    data-opacity="0"
+                    data-translatex="-900"
+                    data-opacity="0"
+                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                    Tel : 0146062815</h6>
+
+                    <h6><img src="/static/img/icon/calendar.png" class="info_text scrollme animateme"
+                    data-when="enter"
+                    data-from="0.55"
+                    data-to="0"
+                    data-opacity="0"
+                    data-translatex="-900"
+                    data-opacity="0"
+                    style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                    Reservation conseillé, en particulier le week-end</h6>
+
+                    <a href="#reservation">
+                        <div class="cta">reserver</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="map" id="map"></div>
+
+            <div id="lacarte">
+                <div id="lacarte_img"
+                class="scrollme animateme"
+                data-when="enter"
+                data-from="1"
+                data-to="0"
+                data-opacity="0"
+                style="opacity: 0.87; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                </div>
+
+                <div id="lacarte_text">
+                    <h6 class="scrollme animateme" data-when="enter" data-from="1" data-to="0" data-opacity="0" data-translatex="100" data-opacity="0" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                    Compositions de fruits de mer, assiettes de poisson ou de viande, faite votre choix parmis nos nombreuses selections </h6>
+
+                    <h6 class="scrollme animateme" data-when="enter" data-from="1" data-to="0" data-opacity="0" data-translatex="100" data-opacity="0" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                    Tout nos poissons sont sauvages et péchés par de petits bateauxbretons.</h6>
+
+                    <h6 class="scrollme animateme" data-when="enter" data-from="1" data-to="0" data-opacity="0" data-translatex="100" data-opacity="0" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                    Menu entrée + plat + dessert à 49€.</h6>
+
+                    <a href="/carte">
+                        <div class="cta scrollme animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" style="opacity: 0.87; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                            carte</div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="histoire">
+
+                <div class="fotorama" id="histoire_img"
+                    data-width="100%"
+
+                    data-ratio="16/9"
+                    data-allowfullscreen="true"
+                    data-fit='cover'
+                    data-autoplay="1800"
+                    data-transition='crossfade'
+                    data-transitionduration="800"
+                    data-loop='true'
+                    data-stopautoplayontouch="true"
+                    data-nav="false">
+                      <img src="/static/img/equipe1.jpg">
+                      <img src="/static/img/equipe2.jpg">
+                      <img src="/static/img/equipe3.jpg">
+                      <img src="/static/img/equipe4.jpg">
+                </div>
+
+                <div id="histoire_text">
+                    <h6 class="scrollme animateme"
+                    data-when="enter"
+                    data-from="0.5"
+                    data-to="0"
+                    data-crop="false"
+                    data-opacity="0"
+                    data-scale="1.5"
+                    style="opacity: 0.66; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1.169, 1.169, 1.169);">
+
+
+                    <!-- La création de « La Mascotte » semble remonter à 1889 à l’époque ou son grand comptoir occupait tout le rez de chaussée d’un hôtel de deux étages « Le Pompéa »
+                    Son propriétaire, le Père Teissier, le fit surélevever de trois nouveaux étages, qu’il baptisa « Hôtel Antinéa », pour y établir chacun de ses deux fils.
+                    Quelque peu hôtel de rendez-vous comme son nom l’indique, « le Pompéa » hébergea dans les années 1930 Edith Piaf et son pianiste, pendant que messieurs Laurent et Méria tenaient le café et ses quatres billards.
+                    Monsieur Laurent, originaire de Fleurie, y servait le vin nouveau à sa clientèle de commerçants du quartier et d’artistes locaux : Toppa, Lecomte, Gen Paul…
+                    Puis la famille Conte lui succéda jusqu’en septembre 1965 où Maurice et Irène Campion s’y établirent.
+                    C’est aujourd’hui leur fils Thierry qui perpétue la tradition Montmartro-Aveyronnaise.-->  Ancienement baptisé « le Pompéa », la Mascotte à été fondée en 1889! <br> Dans les années 30, l'établiseement acceuillait Edith Piaf et son pianiste pendant que messieurs Laurent et Méria tenaient le café. <br><br> Découvrez un lieu historique!</h6>
+
+                </div>
+            </div>
+
+            <div id="bar">
+
+
+                <div class="fotorama" id="bar_img"
+                    data-width="100%"
+                    data-ratio="16/9"
+                    data-allowfullscreen="true"
+                    data-fit='cover'
+                    data-autoplay="2000"
+                    data-transition='crossfade'
+                    data-transitionduration="800"
+                    data-loop='true'
+                    data-stopautoplayontouch="true"
+                    data-nav="false">
+                      <img src="/static/img/bar.jpg">
+                      <img src="/static/img/bar1.jpg">
+                      <img src="/static/img/bar2.jpg">
+                </div>
+
+
+                <div id="bar_text">
+                    <h6 class="scrollme animateme"
+                    data-when="enter"
+                    data-from="0.5"
+                    data-to="0"
+                    data-crop="false"
+                    data-opacity="0"
+                    data-scale="1.5"
+                    style="opacity: 0.66; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1.169, 1.169, 1.169);">
+
+                    <!-- C’est un zinc de quartier, à la clientèle mélangée et haute en couleur. On y retrouve l’ambiance d’un Montmartre de légende, sans la nostalgie d’un passé qui est ici toujours bien vivant. Et bon vivant.
+                    Thierry Campion, patron de l’établissement, excelle dans l’art de dénicher des vins de grande qualité issus de producteurs encore peu diffusés.
+                    La grande variété des vins de La Mascotte  en témoigne : ce n’est pas pour rien qu’il à obtenu la Coupe du meilleur pot en 1999.
+                    Le dimanche, de midi à 15h, c’est ambiance musette. Il n’est pas rare que les clients poussent la chansonnette.--> Le dimanche, de midi à 15h, c’est ambiance musette. <br>Il n’est pas rare que les clients poussent la chansonnette <br>Alors venez découvrir l'ambiance unique de notre bar!<br> </h6>
+
+                </div>
+            </div>
+
+            <div class="separation"  id="reservation"></div>
+
+            <div id="form_container1">
+                <form>
+                     <fieldset>
+                        <input type="text" id="last_name" name="first_name" placeholder="nom"/>
+                        <input type="text" id="first_name" name="last_name" placeholder="prénom"/>
+                        <input class="date" type="text" id="date" name="hour" value="" placeholder="date et heure"/>
+                        <input type="phone" id="phone" name="phone" placeholder="telephone"/></br>
+                        <input type="email" id="email" name="email" placeholder="email"/>
+                        <input type="text" id="people" name="people" placeholder="nombre">
+                        <textarea id="demande" name="demande" placeholder="demande particulières"></textarea>
+                        <input type="submit" value="reservation" />
+                     </fieldset>
+                </form>
+            </div>
+
+            <div class="separation"></div>
+
+        </div>
+
+        <section>
+            <div class="paraxify" id="salle">
+                <h1>SALLE PRIVATISABLE</h1>
+            </div>
+        </section>
+
+        <div class="body_container" id="sale_privatisable">
+            <div id="priva_block">
+                <div id="priva_text">
+                    <p> Au 1er étage, une salle indépendante de 40 couverts. </br> </br>
+                        Idéale pour repas de société, mariage, baptême, etc…  </br>
+                        N’hésitez pas à nous consulter via ce formulaire pour un devis de location.</br>
+                        Nous vous répondrons dans la journée!</p>
+                </div>
+
+                <div id="form_container2">
+                    <form>
+                         <fieldset>
+                            <input type="text" id="last_name2" name="first_name" placeholder="nom"/>
+                            <input type="email" id="email2" name="email" placeholder="email"/>
+                            <textarea id="message2" name="demande" placeholder="message"></textarea>
+                            <input type="submit" class="cta" value="envoyer" />
+                         </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <div class="separation"></div>
+
+            <a href="http://www.la-mascotte-montmartre.com/livraison-fruits-de-mer/">
+            <div class="cta" id="commandez">commendez en ligne!</div>
+            </a>
+
+            <div class="separation"></div>
+
+        </div>
+    </main>
+
+    <div id="container-floating">
+        <div class="flag2 appear-flag">
+            <img src='/static/img/IT.png'>
+        </div>
+        <div class="flag1 appear-flag">
+            <img src='/static/img/UK.png'>
+        </div>
+        <div id="fixed-flag">
+            <img src='/static/img/FR.png'>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+
+        </div>
+    </footer>
+
+
+
+
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="js/jqDatePicker.min.js"></script>
+    <script src="/static/js/floating_text.js">
+    </script>
+    <script src="/static/js/main.js">
+    </script>
+    <script src="/static/js/jquery.scrollme.min.js">
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBCKlE1yBf7M8dmflCbdFY7a4I_jvLuNs&libraries=places&callback=initMap">
+    </script>
+    <script src="/static/js/paraxify.js"></script>
+    <script>
+        myParaxify = paraxify('.paraxify');
+    </script>
+    <script type="text/javascript" src="/static/js/jqDatePicker.min.js"></script>
+    <script type="text/javascript">
+        $('.date').datePicker([options]); // that's it
+    </script>
+</body>
+
+</html>

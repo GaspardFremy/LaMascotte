@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <title>La Carte</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/carte.css">
+
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="/static/img/favicon.ico">
+</head>
+
+<body>
+    <!-- PROGRESSE BAR ON SCROLL -->
+    <div class="progressContainer">
+        <div class="progressBar">
+        </div>
+    </div>
+
+    <!-- MENU_BOTTOM -->
+    <nav id="menu_down" class="botnav" id="myBotpnav">
+        <ul>
+            <li><a href="#anchor_aperitif">Apéritifs</a></li>
+            <li><a href="#anchor_huitre">Les huitres</a></li>
+            <li><a href="#anchor_crustace">Les fruits de mer</a></li>
+            <li><a href="#anchor_composition">Les compositions</a></li>
+            <li><a href="#anchor_entrees">Les entrées</a></li>
+            <li><a href="#anchor_poissons">Poissons</a></li>
+            <li><a href="#anchor_viande">Viandes</a></li>
+            <li><a href="#anchor_menus">Menus</a></li>
+            <li><a href="#anchor_desserts">Desserts</a></li>
+            <li><a href="#anchor_epicerie">Épicerie</a></li>
+        </ul>
+    </nav>
+
+    <!-- MENU -->
+    <div class="topnav" id="myTopnav">
+        <div id="menu_container">
+             <a href="#info_pratiques">Infos Pratiques</a>
+             <a href="/carte">La carte</a>
+             <a href="/ecaille">Le lieux</a>
+             <img id="img_menu" src="/static/img/logo_menu.png">
+             <a href="#emporter">vente à emporter</a>
+             <a href="#reservation">réservation</a>
+             <a href="#sale_privatisable">Sale privatisable</a>
+             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- APERITIF -->
+        <section id="anchor_aperitif">
+            <div class="paraxify" id="aperitif">
+                <h1>APERITIF</h1>
+            </div>
+        </section>
+
+        <div class="menu-content">
+            <div class="left_side_menu">
+                <div class="meal-left">
+                    <h6 class="meal_title">A découvrir</h6>
+                    <p class="lobster_categorie">Absinthe de Montmartre à la "Fontaine" </p>
+                    <p class="lobster_price">8,5</p>
+                </div>
+
+                <div class="meal-left">
+                    <p class="lobster_categorie">Muscat du Cap Corse - Domaine de Catarelli 2015 </p>
+                    <p class="lobster_price">9</p>
+                </div>
+
+                <div class="meal-left">
+                    <p class="lobster_categorie">Coteaux de l’Aubance - Domaine Richou </p>
+                    <p class="lobster_price">8,5</p>
+                </div>
+
+                <div class="meal-left">
+                    <p class="lobster_categorie">Rivesaltes 2012 – Domaine Vaquer à Tresserre</p>
+                    <p class="lobster_price">11</p>
+                </div>
+
+                <div class="meal-left">
+                    <p class="lobster_categorie">Rivesaltes Ambré Hors d’Age – 25 ans – Domaine de Vaquer à Tresserre</p>
+                    <p class="lobster_price">15</p>
+                </div>
+
+                <div class="meal-left">
+                    <h6 class="meal_title">Kirs</h6>
+                    <p class="lobster_categorie">Le Kir « Mascotte » Blanc pétillant </p>
+                    <p class="lobster_price">10</p>
+                </div>
+
+                <div class="meal-left">
+                    <p class="lobster_categorie">Le Kir Royal Champagne</p>
+                    <p class="lobster_price">13,5</p>
+                </div>
+            </div>
+
+            <div class="right_side_menu">
+
+                <div class="meal-right">
+                    <h6 class="meal_title">Champagnes</h6>
+                    <p class="lobster_categorie">RoberDelph, "Domaine Denis Robert"</p>
+                    <p class="lobster_price">55/12</p>
+                </div>
+                <div class="meal-right">
+                    <p class="lobster_categorie">Louis Dehu, brut tradition à Venteuil (AB)</p>
+                    <p class="lobster_price">69/14</p>
+                </div>
+                <div class="meal-right">
+                    <p class="lobster_categorie">Domaine Fleury, Champagne rosé (AB)</p>
+                    <p class="lobster_price">69/14</p>
+                </div>
+                <div class="meal-right">
+                    <p class="lobster_categorie">Gosset Brut Grande Réserve</p>
+                    <p class="lobster_price">83/15</p>
+                </div>
+
+                <div class="meal-right">
+                    <h6 class="meal_title">Fait Maison</h6>
+                    <p class="lobster_categorie">L’Américano</p>
+                    <p class="lobster_price">13,5</p>
+                </div>
+
+                <div class="meal-right">
+                    <p class="lobster_categorie">Le Spritz</p>
+                    <p class="lobster_price">11</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- HUITRES -->
+        <section>
+            <div class="paraxify" id="huitres">
+                <h1>HUITRES</h1>
+            </div>
+        </section>
+
+        <div class="menu-content" id="anchor_huitre">
+
+            <ul class="type_food">
+                <li id="oleron" class="type_food_active"><a href="#" onclick="return false;">Bassin de Marenne-Oléron</a></li>
+                <li id="bretagne"><a href="#" onclick="return false;">Bretagne</a></li>
+                <li id="normandie"><a href="#" onclick="return false;">Normandie</a></li>
+                <li id="mediterranee"><a href="#" onclick="return false;">Méditerranée</a></li>
+                <li id="irlande"><a href="#" onclick="return false;">Irlande</a></li>
+            </ul>
+
+
+            <div class="oleron_menu visible">
+                <div class="left_side_menu">
+                    <div class="meal-left">
+                        <h6 class="meal_title">DAVID HERVE « le cabanon de l’huître » dans les marais de Saint Just</h6>
+                        <p class="lobster_categorie">Les Fines de Claire</p>
+                        <p class="lobster_size">Moyenne n°3</p>
+                        <p class="lobster_price">19</p>
+                    </div>
+                </div>
+
+                <div class="meal-left none">
+                    <div class="left_side_menu">
+                        <h6 class="meal_title">Maison GILLARDEAU a Bourcefranc le Chapus</h6>
+                        <p class="lobster_categorie">Les Fines de Claire</p>
+                        <p class="lobster_size">Moyenne n°3</p>
+                        <p class="lobster_price">19</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bretagne_menu none">
+                <div class="meal-left">
+                    <div class="left_side_menu">
+                        <h6 class="meal_title">JEAN D’CANCALE (Naissain Naturel)</h6>
+                        <p class="lobster_categorie">Les Fines de Cancale</p>
+                        <p class="lobster_size">Très grosse n°1
+                            <p class="lobster_price">18,6</p>
+                        </p>
+                        <p class="lobster_size">Moyenne n°3
+                            <p class="lobster_price">17,4</p>
+                        </p>
+                        <p class="lobster_size">Moyenne n°4
+                            <p class="lobster_price">15,6</p>
+                        </p>
+                        <p class="lobster_categorie">Les Fines de Cancale</p>
+                        <p class="lobster_size">Très gros "00"
+                            <p class="lobster_price">33,6</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="normandie_menu none">
+                <div class="meal-left">
+                    <div class="left_side_menu">
+                        <h6 class="meal_title">THALASSA TRADITION A BLAINVILLE (Naissain Naturel)</h6>
+                        <p class="lobster_categorie">Les Pleine Mer de Blainville</p>
+                        <p class="lobster_size">Grosse n°2
+                            <p class="lobster_price">18,6</p>
+                        </p>
+                        <p class="lobster_categorie">Les Spéciales d’Isigny</p>
+                        <p class="lobster_size">Moyenne n°3
+                            <p class="lobster_price">18,6</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mediterranee_menu none">
+                <div class="meal-left">
+                    <div class="left_side_menu">
+                        <h6 class="meal_title">Les «huîtres roses et solaires» de la Maison TARBOURIECH à Marseillan</h6>
+                        <p class="lobster_categorie">Spéciales «Roses et Solaires»</p>
+                        <p class="lobster_size">Grosse n°2
+                            <p class="lobster_price">33,6</p>
+                        </p>
+                        <p class="lobster_categorie">La « Seven de Sète » ou « papillon rose »</p>
+                        <p class="lobster_size">Petite n°5
+                            <p class="lobster_price">26,7</p>
+                        </p>
+                        <p class="lobster_categorie">Les Fines de Bouzigues</p>
+                        <p class="lobster_size">Moyenne n°3
+                            <p class="lobster_price">17,4</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="irlande_menu none">
+                <div class="meal-left">
+                    <div class="left_side_menu">
+                        <h6 class="meal_title">Naissains et Producteurs français sur le plus beau terroir d’Irlande</h6>
+                        <p class="lobster_categorie">« l’ OSTRA REGAL » sud-est Irlande</p>
+                        <p class="lobster_size">Moyennes n° 3
+                            <p class="lobster_price">25,8</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- CRUSTACÉS -->
+        <section>
+            <div class="paraxify" id="fruits">
+                <h1>LES FRUITS DE MER</h1>
+            </div>
+        </section>
+
+        <div class="menu-content" id="anchor_crustace">
+            <span class="type_food">
+                <ul>
+                    <li id="crustace" class="type_food_active"><a href="#" onclick="return false;">Crustacés et coquilages</li>
+                    <li id="homard"><a  href="#" onclick="return false;">Homards</a></li>
+                </ul>
+            </span>
+
+            <div class="crustace_menu">
+
+                <div class="left_side_menu">
+                    <div class="meal-left">
+                        <h6 class="meal_title">Crevettes roses de Dakar</h6>
+                        <p class="lobster_price">12,5</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Crevettes roses de Madagascar</h6>
+                        <p class="lobster_price">15</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Grosses crevettes de Madagascar</h6>
+                        <p class="lobster_price">17</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Crevettes grises Jumbo</h6>
+                        <p class="lobster_price">10,5</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">La portion de bulots</h6>
+                        <p class="lobster_price">8</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">La portion de bigorneaux</h6>
+                        <p class="lobster_price">9</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Le clams</h6>
+                        <p class="lobster_price">6</p>
+                    </div>
+                </div>
+
+                <div class="right_side_menu">
+                    <div class="meal-right">
+                        <h6 class="meal_title">La langoustine</h6>
+                        <p class="lobster_price">4,5</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Le tourteau</h6>
+                        <p class="lobster_price">18</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">La palourde</h6>
+                        <p class="lobster_price">2,8</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">La praire (en saison)</h6>
+                        <p class="lobster_price">2,8</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">L ’amande</h6>
+                        <p class="lobster_price">1,5</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">La moule</h6>
+                        <p class="lobster_price">1,5</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="homard_menu none">
+                <div class="left_side_menu">
+                    <div class="meal-left">
+                        <h6 class="meal_title">Homard Breton vivant</h6>
+                        <p class="lobster_size">Les 100g</p>
+                        <p class="lobster_price">14</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Homard Canadien vivant</h6>
+                        <p class="lobster_size">Les 100g</p>
+                        <p class="lobster_price">14</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Langouste vivante </h6>
+                        <p class="lobster_size">Sur commande</p>
+                        <p class="lobster_price">Selon cours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- COMPOSITIONS -->
+        <section>
+            <div class="paraxify" id="compositions">
+                <h1>COMPOSITIONS</h1>
+            </div>
+        </section>
+
+        <div class="menu-content" id="anchor_composition">
+            <div class="composition-menu">
+
+                <div class="left_side_menu">
+                    <div class="meal-left">
+                        <h6 class="meal_title">à la découverte de crus d’exceptions</h6>
+                        <p class="lobster_price">87</p>
+                        <p class="lobster_categorie">3 Belons n° 00</p>
+                        <p class="lobster_categorie">3 Spéciales Tarbouriech n° 2</p>
+                        <p class="lobster_categorie">3 Spéciales « Ostra Regal » n° 3</p>
+                        <p class="lobster_categorie">3 Seven ou papillon rose</p>
+                        <p class="lobster_categorie">3 Huîtres de Cancale n° 1</p>
+                        <p class="lobster_categorie">3 Spéciales d’Isigny n° 3</p>
+                    </div>
+
+                    <div class="meal-left">
+                        <h6 class="meal_title">l’assiette de fruits de mer</h6>
+                        <p class="lobster_price">33</p>
+                        <p class="lobster_categorie">3 Fines de Cancale n° 4</p>
+                        <p class="lobster_categorie">3 Palourdes</p>
+                        <p class="lobster_categorie">3 Moules</p>
+                        <p class="lobster_categorie">3 Amandes</p>
+                        <p class="lobster_categorie">3 Crevettes roses</p>
+                        <p class="lobster_categorie">1 Portion de bulots</p>
+                    </div>
+
+                    <div class="meal-left">
+                        <h6 class="meal_title">le plateau mascotte</h6>
+                        <p class="lobster_price">145</p>
+                        <p class="lobster_categorie">2 Belons n° 00</p>
+                        <p class="lobster_categorie">4 Fines de Bouzigues n° 3</p>
+                        <p class="lobster_categorie">4 Huîtres de Cancale n° 1</p>
+                        <p class="lobster_categorie">4 Fines de Claire n° 3</p>
+                        <p class="lobster_categorie">4 Pleine Mer de Blainville n° 2</p>
+                        <p class="lobster_categorie">2 Clams</p>
+                        <p class="lobster_categorie">2 Praires</p>
+                        <p class="lobster_categorie">2 Palourdes</p>
+                        <p class="lobster_categorie">4 Moules</p>
+                        <p class="lobster_categorie">4 Amandes</p>
+                        <p class="lobster_categorie">6 Crevettes roses de Madagascar</p>
+                        <p class="lobster_categorie">1 Portion de grosses crevettes grises</p>
+                        <p class="lobster_categorie">1 Portion de gros bigorneaux</p>
+                        <p class="lobster_categorie">1 Portion de bulots</p>
+                        <p class="lobster_categorie">4 Langoustines</p>
+                        <p class="lobster_categorie">avec un Homard + 35 €</p>
+                    </div>
+                </div>
+
+                <div class="right_side_menu">
+                    <div class="meal-right">
+                        <h6 class="meal_title">le tour des parcs à huîtres</h6>
+                        <p class="lobster_price">68</p>
+                        <p class="lobster_categorie">6 Pleine Mer de Blainville n° 2</p>
+                        <p class="lobster_categorie">6 Pleine Mer de Blainville n° 2</p>
+                        <p class="lobster_categorie">6 Fines de Cancale n° 4</p>
+                        <p class="lobster_categorie">6 Fines de Bouzigues n° 3</p>
+                        <p class="lobster_categorie">6 Fines de Claire n° 3</p>
+                    </div>
+
+                    <div class="meal-right">
+                        <h6 class="meal_title">l’escale de la mascotte</h6>
+                        <p class="lobster_price">95</p>
+                        <p class="lobster_categorie">6 Fines de Cancale n° 4</p>
+                        <p class="lobster_categorie">6 Pleine Mer de Blainville n° 2</p>
+                        <p class="lobster_categorie">2 Palourdes</p>
+                        <p class="lobster_categorie">6 Moules</p>
+                        <p class="lobster_categorie">6 Amandes</p>
+                        <p class="lobster_categorie">1 Portion de grosses crevettes grises</p>
+                        <p class="lobster_categorie">1 Portion de gros bigorneaux</p>
+                        <p class="lobster_categorie">1 Portion de bulots</p>
+                        <p class="lobster_categorie">2 Langoustines</p>
+                        <p class="lobster_categorie">2 Demi tourteaux</p>
+                        <p class="lobster_categorie"></p>
+                    </div>
+
+                    <div class="meal-right">
+                        <h6 class="meal_title">le royal mascotte</h6>
+                        <p class="lobster_price">185</p>
+                        <p class="lobster_categorie">3 Belons n° 00</p>
+                        <p class="lobster_categorie">3 Spéciales Tarbouriech n° 2</p>
+                        <p class="lobster_categorie">3 Spéciales « Ostra Regal » n° 3</p>
+                        <p class="lobster_categorie">3 Seven ou papillon rose</p>
+                        <p class="lobster_categorie">3 Huîtres de Cancale n° 1</p>
+                        <p class="lobster_categorie">3 Spéciales d’Isigny n° 3</p>
+                        <p class="lobster_categorie">2 Praires</p>
+                        <p class="lobster_categorie">2 Palourdes</p>
+                        <p class="lobster_categorie">4 Moules</p>
+                        <p class="lobster_categorie">4 Amandes</p>
+                        <p class="lobster_categorie">6 Grosses crevettes de Madagascar</p>
+                        <p class="lobster_categorie">1 Portion de grosses crevettes grises</p>
+                        <p class="lobster_categorie">1 Portion de bulots</p>
+                        <p class="lobster_categorie">4 Langoustines</p>
+                        <p class="lobster_categorie">2 Demi tourteaux</p>
+                        <p class="lobster_categorie">1 Homard</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ENTRÉES -->
+        <section>
+            <div class="paraxify" id="entrées">
+                <h1>ENTRÉES</h1>
+            </div>
+        </section>
+
+        <div class="menu-content" id="anchor_entrees">
+            <span class="type_food">
+                <ul>
+                    <li id="entrees_froides" class="type_food_active"><a href="#" onclick="return false;">Entrées froides</li>
+                    <li id="entrees_chaudes"><a href="#" onclick="return false;">Entrées chaudes</a></li>
+                </ul>
+            </span>
+
+            <div class="entrees_froides_menu">
+
+                <div class="left_side_menu">
+                    <div class="meal-left">
+                        <h6 class="meal_title">Mariné de coquilles Saint Jacques de Granville au ponzu et sel bleu de Perse, crumpet servi chaud</h6>
+                        <p class="lobster_price">18</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Pâté en croûte de campagne, moutarde de crémone</h6>
+                        <p class="lobster_price">15</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Ballotin de foie gras d’oie, cuit à basse température, coing confit au poivre de Tasmanie et pain grillé</h6>
+                        <p class="lobster_price">17</p>
+                    </div>
+                </div>
+
+                <div class="right_side_menu">
+                    <div class="meal-right">
+                        <h6 class="meal_title">Coques blanches de nos côtes en salade de charlotte tièdes, vinaigre de pomme bio améa et huile d’olive de l’Atlas<p class="lobster_price">16</p></h6>
+
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Gelée de lapin sauté chasseur, sauce aigre douce et germe de poireaux<p class="lobster_price">14</p></h6>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="entrees_chaudes_menu none">
+                <div class="left_side_menu">
+                    <div class="meal-left">
+                        <h6 class="meal_title">Vol au vent de ris de veau aux champignons</h6>
+                        <p class="lobster_price">18</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Pizzette de langoustines bretonnes, caviar d’aubergines fumées, lamelles de truffes noires mélanosporum</h6>
+                        <p class="lobster_price">22</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Friture d’encornets, sauce tartare</h6>
+                        <p class="lobster_price">15</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Œufs bio de poule en meurette, à la façon d’Aurélien, notre chef</h6>
+                        <p class="lobster_price">16</p>
+                    </div>
+                </div>
+
+                <div class="right_side_menu">
+                    <div class="meal-right">
+                        <h6 class="meal_title">Traditionnelles ravioles de Royan label rouge à la sauce poulette</h6>
+                        <p class="lobster_price">18</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Les six gros escargots de Bourgogne en persillade</h6>
+                        <p class="lobster_price">12</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">La soupe de poissons de roche de Bretagne, sa rouille et ses croûtons à l’ail</h6>
+                        <p class="lobster_price">16</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- POISSONS -->
+        <section>
+            <div class="paraxify" id="poissons">
+                <h1>POISSONS</h1>
+            </div>
+        </section>
+
+        <div class="menu-content" id="anchor_poissons">
+            <div class="poisson_menu">
+
+                <div class="left_side_menu">
+                    <div class="meal-left">
+                        <h6 class="meal_title">Choucroute de La Mascotte aux poissons</h6>
+                        <p class="lobster_price">35</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Epais de colin en croûte de noisette, épinards frais à la crème</h6>
+                        <p class="lobster_price">29</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Pétales de lotte braisées au Sauternes, riso liées aux sucs d’étrille et brunoise maraîchère</h6>
+                        <p class="lobster_price">33</p>
+                    </div>
+                </div>
+
+                <div class="right_side_menu">
+                    <div class="meal-right">
+                        <h6 class="meal_title">Fish and chips, vinaigre de malt et sauce tartare, frites maison</h6>
+                        <p class="lobster_price">28</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Belle sole de Bretagne en meunière et purée à l’ancienne</h6>
+                        <p class="lobster_price">44</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Le « litre » de moules à la Normande et frites maison</h6>
+                        <p class="lobster_price">25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- VIANDES -->
+        <section>
+            <div class="paraxify" id="viandes">
+                <h1>VIANDES</h1>
+            </div>
+        </section>
+
+        <div class="menu-content" id="anchor_viande">
+            <div class="viande_menu">
+
+                <div class="left_side_menu">
+                    <div class="meal-left">
+                        <h6 class="meal_title">Beau cassoulet maison</h6>
+                        <p class="lobster_price">34</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Paleron de bœuf, confit au vin rouge, carottes des sables en mousseline infusée au thym</h6>
+                        <p class="lobster_price">29</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Canard français laqué par nos soins aux quatre épices, jus kécap, aligot de l’Aubrac</h6>
+                        <p class="lobster_price">32</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Belle entrecôte d’Angus à la plancha, crème de camembert et frites maison</h6>
+                        <p class="lobster_price">33</p>
+                    </div>
+                </div>
+
+                <div class="right_side_menu">
+                    <div class="meal-right">
+                        <h6 class="meal_title">Palette de porc fermier confite, jus et endives chicorée au pommeau</h6>
+                        <p class="lobster_price">29</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Tartare de bœuf d’Aubrac, frites maison ou salades mélées</h6>
+                        <p class="lobster_price">28</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">L’ assiette d’aligot ou de légumes de saison</h6>
+                        <p class="lobster_price">12</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Changement de garniture aligot ou légumes de saison</h6>
+                        <p class="lobster_price">7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MENUS -->
+        <!-- <section id="anchor_menus">
+            <div class="paraxify" id="menu">
+                <h1>MENU</h1>
+            </div>
+        </section> -->
+
+        <!-- DESSERTS -->
+        <section>
+            <div class="paraxify" id="desserts">
+                <h1>DESSERTS</h1>
+            </div>
+        </section>
+
+        <div class="menu-content" id="anchor_desserts">
+            <span class="type_food">
+                <ul>
+                    <li id="desserts_maison" class="type_food_active"><a href="#" onclick="return false;">Desserts maison</li>
+                    <li id="glaces"><a href="#" onclick="return false;">Glaces et sorbets Berthillon</a></li>
+                    <li id="fromages"><a href="#" onclick="return false;">Les fromages</a></li>
+                </ul>
+            </span>
+
+            <div class="desserts_maison_menu">
+
+                <div class="left_side_menu">
+                    <div class="meal-left">
+                        <h6 class="meal_title">Caillé de chèvre frais de la « Fromagerie du Tertre » à Fougeré en Anjou façon sucrée : coulis de fruits rouges ou miel</h6>
+                        <p class="lobster_price">10</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Crêpes flambées au Grand Marnier</h6>
+                        <p class="lobster_price">14</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Profitéroles aux choux croquants et glace vanille de la maison Berthillon, sauce au chocolat</h6>
+                        <p class="lobster_price">16</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Poire Williams en verrine rafraîchit par son coulis, chocolat chaud « Guayaquil »</h6>
+                        <p class="lobster_price">14</p>
+                    </div>
+                </div>
+
+                <div class="right_side_menu">
+                    <div class="meal-right">
+                        <h6 class="meal_title">Cœur coulant au praliné noisette et sa glace de la maison Berthillon</h6>
+                        <p class="lobster_price">15</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Millefeuille à la crème légère vanillée de Madagascar</h6>
+                        <p class="lobster_price">15</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Le café gourmand de La Mascotte</h6>
+                        <p class="lobster_price">14</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glaces_menu none">
+                <div class="left_side_menu">
+                    <div class="meal-left">
+                        <h6 class="meal_title">La coupe trois parfums</h6>
+                        <p class="lobster_price">15</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">4 parfums au choix, coulis de fruits rouges ou chocolat chaud, chantilly</h6>
+                        <p class="lobster_price">18</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Le sorbet poire et son verre d’alcool de poire</h6>
+                        <p class="lobster_price">16</p>
+                    </div>
+                </div>
+
+                <div class="right_side_menu">
+                    <div class="meal-right">
+                        <h6 class="meal_title">Le sorbet pomme verte et son verre de Calvados</h6>
+                        <p class="lobster_price">16</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Le sorbet cassis et son verre de crème de cassis</h6>
+                        <p class="lobster_price">16</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fromages_menu none">
+                <div class="left_side_menu">
+                    <div class="meal-left">
+                        <h6 class="meal_title">Caillé de chèvre frais de la « Fromagerie du Tertre » à Fougeré en Anjou façon salée : échalotes et fines herbes</h6>
+                        <p class="lobster_price">10</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Camembert au lait cru</h6>
+                        <p class="lobster_price">9</p>
+                    </div>
+                    <div class="meal-left">
+                        <h6 class="meal_title">Cantal ou Saint Nectaire fermier ou Fourme d’Ambert, etc.</h6>
+                        <p class="lobster_price">10</p>
+                    </div>
+                </div>
+
+                <div class="right_side_menu">
+                    <div class="meal-right">
+                        <h6 class="meal_title">Plateau de fromages</h6>
+                        <p class="lobster_price">16</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Salade mixte</h6>
+                        <p class="lobster_price">12</p>
+                    </div>
+                    <div class="meal-right">
+                        <h6 class="meal_title">Salade verte</h6>
+                        <p class="lobster_price">9</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- EPICERIES -->
+        <section>
+            <div class="paraxify" id="épicerie">
+                <h1>ÉPICERIE FINE</h1>
+            </div>
+        </section>
+
+        <div class="epicerie" id="anchor_epicerie">
+
+            <div class="left_side_menu">
+                <div class="meal-left">
+                    <h6 class="meal_title">L’ Assiette Nordique », crème de raifort</h6>
+                    <p class="lobster_price">19</p>
+                </div>
+                <div class="meal-left">
+                    <h6 class="meal_title">Tapas d’Anchois Desclaux à Collioure</h6>
+                    <p class="lobster_price">16</p>
+                </div>
+                <div class="meal-left">
+                    <h6 class="meal_title">Sardines de «La Perle des Dieux» à Saint Gilles-Croix-de-Vie</h6>
+                    <p class="lobster_price">16</p>
+                </div>
+            </div>
+
+            <div class="right_side_menu">
+                <div class="meal-right">
+                    <h6 class="meal_title">millésime 2013 «Mademoiselle Lulu», pain de campagne et beurre salé</h6>
+                    <p class="lobster_price">13</p>
+                </div>
+                <div class="meal-right">
+                    <h6 class="meal_title">Rillettes de thon façon cajun (Atelier du Poissonnier à Agon Coutainville)</h6>
+                    <p class="lobster_price">13</p>
+                </div>
+                <div class="meal-right">
+                    <h6 class="meal_title">Rillettes de dorade, crevettes citron vert et gingembre (Atelier du Poissonnier)</h6>
+                    <p class="lobster_price">13</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- SCRIPT -->
+    <script src="/static/js/menu.js"></script>
+    <script src="/static/js/paraxify.js"></script>
+    <script>
+        myParaxify = paraxify('.paraxify');
+    </script>
+</body>
+
+</html>
